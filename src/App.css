@@ -22,6 +22,7 @@
   margin-top: 5vh;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .logo-container {
@@ -39,6 +40,7 @@
   align-items: center;
   margin: 3rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .movie-card {
@@ -46,6 +48,27 @@
   width: 10rem;
   height: 15rem;
   border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.movie-card-content {
+  background-color: red;
+  width: 100%;
+}
+
+.movie-banner-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  filter: brightness(0.8);
+  cursor: pointer;
+
+  transition: transform 1.2s;
+}
+
+.movie-banner-img:hover{
+  transform: scale(1.1);
+  filter: brightness(1);
 }
 
 .movies-container {
@@ -90,7 +113,7 @@
 }
 
 .btn-container button:hover {
-  background-color: #68b9d6;
+  filter: brightness(1.2);
 }
 
 

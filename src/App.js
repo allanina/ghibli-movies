@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import ImgLogo from './assets/logo.png';
 
 function App() {
+  const [movieCard, setMovieCard] = useState([]);
+
+  useEffect(() => {
+    fetch('https://ghibliapi.herokuapp.com/films/')
+      .then(response => response.json())
+      .then(data => setMovieCard(data))
+    console.log(movieCard)
+  }, [])
+
+
   return (
     <body className="App">
 
@@ -24,19 +35,11 @@ function App() {
           </div>
         </header>
         <main className="movie-card-container">
-          <div className="movie-card">
-            teste
-          </div>
-          <div className="movie-card">
-            teste
-          </div>
-          <div className="movie-card">
-            teste
-          </div>
-          <div className="movie-card">
-            teste
-          </div>
-
+          {movieCard.map(movie => (
+            <div className="movie-card">
+              <img className="movie-banner-img"  src={movie.image} alt={movie.title}/>
+            </div>
+          ))}
         </main>
       </main>
     </body>

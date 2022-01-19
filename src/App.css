@@ -16,10 +16,9 @@
 }
 
 .movies-body {
-  width: 95vw;
-  height: 90vh;
+  width: 97vw;
+  height: 95vh;
   background-color: #fff;
-  margin-top: 5vh;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -64,7 +63,7 @@
 .movie-card-wrapper {
   overflow-y: scroll;
   width: 100%;
-  height: 38rem;
+  height: 42rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -156,7 +155,28 @@
     height: 15rem;
   }
   .movie-card-wrapper {
-    height: 25rem;
+    height: 27rem;
+  }
+  .logo-container img{
+    margin-left: 5rem;
+    width: 13rem;
+  }
+  .search-container input {
+    height: 2rem;
+  }
+  .btn-container button {
+    height: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    width: 10rem;
+    height: 15rem;
+  }
+  .movie-card-wrapper {
+    height: 30rem;
+    width: 55rem;
   }
   .logo-container img{
     margin-left: 5rem;

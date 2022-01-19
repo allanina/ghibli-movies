@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import ImgLogo from './assets/logo.png';
+import MovieCard from './components/MovieCard';
+import MovieHeader from './components/MovieHeader';
 
 function App() {
-  const [movieCard, setMovieCard] = useState([]);
+  const [movieCardInfo, setMovieCardInfo] = useState([]);
 
   useEffect(() => {
     fetch('https://ghibliapi.herokuapp.com/films/')
       .then(response => response.json())
-      .then(data => setMovieCard(data))
-    console.log(movieCard)
+      .then(data => setMovieCardInfo(data))
+    console.log(movieCardInfo)
   }, [])
 
 
@@ -17,29 +18,9 @@ function App() {
     <body className="App">
 
       <main className="movies-body">
-        <header className="movies-container">
-          <div className="logo-container">
-            <img src={ImgLogo} alt="logo" />
-          </div>
-
-          <div className="search-container">
-            <div className="search-input">
-              <input type="search" />
-            </div>
-
-            <div className="btn-container">
-              <button>Nota</button>
-              <button>Duração</button>
-              <button>Lançamento</button>
-            </div>
-          </div>
-        </header>
+        <MovieHeader />
         <main className="movie-card-container">
-          {movieCard.map(movie => (
-            <div className="movie-card">
-              <img className="movie-banner-img"  src={movie.image} alt={movie.title}/>
-            </div>
-          ))}
+          <MovieCard movieCardInfo={movieCardInfo} />
         </main>
       </main>
     </body>

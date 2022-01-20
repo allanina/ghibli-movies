@@ -1,22 +1,19 @@
+import { Rating } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./styles.css";
-import React, { useEffect, useState } from 'react';
 
-function MovieCard({setMovieInfo}) {
-    const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-        fetch('https://ghibliapi.herokuapp.com/films/')
-            .then(response => response.json())
-            .then(data => setMovies(data))
-        console.log(movies)
-    }, [])
+function MovieCard({ movies }) {
+    const { id } = useParams();
 
     return (
         <div className='movie-card-wrapper'>
             {movies.map(movie => (
                 <div className="movie-card-data" key={movie.id}>
                     <div className="movie-card">
-                        <img className="movie-banner-img" onClick={e => setMovieInfo(movie)} src={movie.image} alt={movie.title} />
+                        <Link to={`/${movie.id}`}>
+                            <img className="movie-banner-img" src={movie.image} alt={movie.title} />
+                        </Link>
                     </div>
                     <div className="movie-banner-movie-title">
                         <span>{movie.title}</span>

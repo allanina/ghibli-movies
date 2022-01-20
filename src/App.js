@@ -1,25 +1,19 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import MovieCard from './components/MovieCard';
-import MovieHeader from './components/MovieHeader';
-import MovieModal from './components/MovieModal';
+import { Route, Switch } from 'react-router-dom';
+import MainPage from './Pages/MainPage';
+import MovieDetails from './Pages/MovieDetails';
 
 function App() {
-  const [movieCardInfo, setMovieCardInfo] = useState(null);
-
-
-
 
   return (
-    <body className="App">
+    <div className="App">
       <main className="movies-body">
-        <MovieHeader />
-        <div className="movie-card-container">
-          <MovieCard setMovieInfo={setMovieCardInfo} />
-          <MovieModal movieInfo={movieCardInfo}/>
-        </div>
+        <Switch>
+          <Route path="/" exact component={MainPage} />
+          <Route path="/:id" component={MovieDetails} />
+        </Switch>
       </main>
-    </body>
+    </div>
   );
 }
 

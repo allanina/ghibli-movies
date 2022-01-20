@@ -13,12 +13,6 @@ function MovieHeader() {
         <div className="search-input">
           <input type="search" />
         </div>
-
-        <div className="btn-container">
-          <button>Nota</button>
-          <button>Duração</button>
-          <button>Lançamento</button>
-        </div>
       </div>
     </header>
   )

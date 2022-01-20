@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Questrial', sans-serif;
   overflow: hidden;
 }
 
@@ -71,7 +71,7 @@
 .movie-card-wrapper {
   overflow-y: scroll;
   width: 100%;
-  height: 47rem;
+  height: 45rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,7 +115,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 10rem;
+  height: 12rem;
 }
 
 .search-container {
@@ -156,13 +156,75 @@
   filter: brightness(1.2);
 }
 
+.movie-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.movie-details-return-btn {
+  margin-bottom: 1rem;
+}
+
+.movie-details-return-btn button {
+  background-color: #1CA0D1;
+  border: none;
+  width: 6rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.6s;
+}
+
+.movie-details-return-btn button:hover {
+  filter: brightness(1.2);
+}
+
+.movie-details-poster-container {
+  height: 53rem;
+  width: 43rem;
+}
+
+.movie-details-poster-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-details-poster-wrapper h1 {
+  font-family: 'Questrial', sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.movie-details-poster-wrapper h3 {
+  font-weight: 400;
+}
+
+.movie-details-poster-wrapper h4 {
+  font-weight: 400;
+  margin-top: 1.5rem;
+}
+
+.movie-details-poster-wrapper p {
+  padding: 2rem;
+}
+
+.movie-details-poster-container img {
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 1440px) {
   .movie-card {
     width: 10rem;
     height: 15rem;
   }
   .movie-card-wrapper {
-    height: 29rem;
+    height: 27rem;
   }
   .logo-container img{
     margin-left: 5rem;
@@ -174,10 +236,13 @@
   .btn-container button {
     height: 1.7rem;
   }
-
   .movie-card-data {
     height: 17rem;
     margin-bottom: 1rem;
+  }
+  .movie-details-poster-container {
+    height: 35rem;
+    width: 25rem;
   }
 }
 

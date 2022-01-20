@@ -16,11 +16,21 @@ function MovieDetails() {
   }, [])
 
   return (
-    <div>
-      <div >
+    <div className='movie-details-wrapper'>
+      <div className='movie-details-return-btn'>
         <Link to="/">
           <button>Voltar</button>
         </Link>
+      </div>
+      <div className='movie-details-poster-wrapper'>
+        <div className='movie-details-poster-container'>
+          <img src={movies.image} alt="movie poster" />
+        </div>
+        <div>
+          <h1>{movies.title}</h1>
+          <h3>{movies.original_title} ({movies.original_title_romanised})</h3>
+          <h4>{movies.director} - {movies.release_date} - {movies.running_time}min</h4>
+        </div>
       </div>
     </div>
   )

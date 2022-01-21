@@ -14,7 +14,7 @@ function MainPage() {
 
     return (
             <>
-                <MovieHeader />
+                <MovieHeader setMovies={setMovies} movies={movies}/>
                 <div className="movie-card-container">
                     <MovieCard movies={movies}/>
                 </div>

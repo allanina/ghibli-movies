@@ -8,12 +8,13 @@ function MovieHeader() {
       <div className="logo-container">
         <img src={ImgLogo} alt="logo" />
       </div>
-
+{/* 
       <div className="search-container">
         <div className="search-input">
           <input type="search" />
         </div>
       </div>
+       */}
     </header>
   )
 }

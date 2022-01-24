@@ -273,8 +273,8 @@
     height: 15rem;
   }
   .movie-card-wrapper {
-    height: 30rem;
-    width: 35rem;
+    height: 22rem;
+    width: 70rem;
   }
   .logo-container img{
     margin-left: 5rem;
@@ -286,6 +286,4 @@
   .btn-container button {
     height: 1.7rem;
   }
-
-  
 }

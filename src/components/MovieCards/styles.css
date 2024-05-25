@@ -1,0 +1,14 @@
+.movie-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 190px);
+}
+
+.movie-card {
+  height: 250px;
+  width: 190px;
+}
+
+.movie-card img {
+  height: 250px;
+  width: 180px;
+}

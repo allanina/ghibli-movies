@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-function MovieCard({ movies }) {
+function MovieCards({ movies }) {
   return (
     <div className="movie-card-wrapper">
       {movies.map((movie) => (
@@ -24,4 +24,4 @@ function MovieCard({ movies }) {
   );
 }
 
-export default MovieCard;
+export default MovieCards;

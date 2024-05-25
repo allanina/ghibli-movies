@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Rating } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 
 function MovieDetails() {

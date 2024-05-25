@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-
-import MovieCard from "../../components/MovieCard";
+import MovieCards from "../../components/MovieCards";
 import MovieHeader from "../../components/MovieHeader";
+import "./styles.css";
 
 function MainPage() {
   const [movies, setMovies] = useState([]);
@@ -13,12 +13,12 @@ function MainPage() {
   }, []);
 
   return (
-    <>
+    <section className="home-container">
       <MovieHeader setMovies={setMovies} movies={movies} />
       <div className="movie-card-container">
-        <MovieCard movies={movies} />
+        <MovieCards movies={movies} />
       </div>
-    </>
+    </section>
   );
 }
 

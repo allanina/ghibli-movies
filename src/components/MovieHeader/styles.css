@@ -1,0 +1,11 @@
+.movies-header-container {
+  height: 20rem;
+}
+
+.logo-container {
+  padding: 100px;
+}
+
+.logo-container img {
+  height: 10rem;
+}

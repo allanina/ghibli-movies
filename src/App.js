@@ -1,10 +1,9 @@
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import MainPage from './Pages/MainPage';
-import MovieDetails from './Pages/MovieDetails';
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import MainPage from "./pages/Home";
+import MovieDetails from "./pages/Movie";
 
 function App() {
-
   return (
     <div className="App">
       <main className="movies-body">

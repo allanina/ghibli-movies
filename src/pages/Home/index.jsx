@@ -1,0 +1,25 @@
+import React, { useEffect, useState } from "react";
+
+import MovieCard from "../../components/MovieCard";
+import MovieHeader from "../../components/MovieHeader";
+
+function MainPage() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://ghibliapi.vercel.app/films/")
+      .then((response) => response.json())
+      .then((data) => setMovies(data));
+  }, []);
+
+  return (
+    <>
+      <MovieHeader setMovies={setMovies} movies={movies} />
+      <div className="movie-card-container">
+        <MovieCard movies={movies} />
+      </div>
+    </>
+  );
+}
+
+export default MainPage;

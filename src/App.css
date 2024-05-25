@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1CA0D1;
+  background-color: #1ca0d1;
   height: 100vh;
 }
 
@@ -23,20 +23,10 @@
   overflow: hidden;
 }
 
-
-.logo-container img{
+.logo-container img {
   margin-top: 1rem;
   margin-left: 5rem;
   width: 20rem;
-}
-
-.movie-card-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 1rem;
 }
 
 .movie-card-data {
@@ -46,17 +36,15 @@
   align-items: center;
   filter: brightness(0.8);
   margin-bottom: 1.5rem;
-  
+
   transition: transform 0.8s;
-  
 }
 
 .movie-card-data span {
   filter: brightness(1);
-
 }
 
-.movie-card-data:hover{
+.movie-card-data:hover {
   transform: scale(1.1);
   filter: brightness(1);
 }
@@ -68,35 +56,12 @@
   margin-top: 0.5rem;
 }
 
-.movie-card-wrapper {
-  overflow-y: scroll;
-  width: 100%;
-  height: 45rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-.movie-card-wrapper::-webkit-scrollbar {
-  width: 8px;
-  background-color: #eef5f8;
-}
-
-.movie-card-wrapper::-webkit-scrollbar-thumb {
-  background-color: #1CA0D1 ;
-  border-radius: 10px;
-}
-
 .movie-card {
   width: 14rem;
   height: 21rem;
   border-radius: 15px;
   margin-left: 0.5rem;
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
-
 }
 
 .movie-card-content {
@@ -140,10 +105,9 @@
   justify-content: space-between;
 }
 
-
 .btn-container button {
   width: 6rem;
-  background-color: #1CA0D1;
+  background-color: #1ca0d1;
   height: 2rem;
   border: none;
   color: #fff;
@@ -168,7 +132,7 @@
 }
 
 .movie-details-return-btn button {
-  background-color: #1CA0D1;
+  background-color: #1ca0d1;
   border: none;
   width: 6rem;
   padding: 0.5rem;
@@ -186,13 +150,13 @@
   width: 43rem;
 }
 
-.movie-details-poster-wrapper{
+.movie-details-poster-wrapper {
   display: flex;
   flex-direction: row;
 }
 
 .movie-details-poster-wrapper h1 {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 3.5rem;
@@ -213,7 +177,6 @@
   border-radius: 15px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 
 .movie-details-info p {
   margin-top: 2rem;
@@ -241,7 +204,7 @@
   .movie-card-wrapper {
     height: 27rem;
   }
-  .logo-container img{
+  .logo-container img {
     margin-left: 5rem;
     width: 18rem;
   }
@@ -264,7 +227,6 @@
     text-align: justify;
     margin-left: 2rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -276,7 +238,7 @@
     height: 22rem;
     width: 70rem;
   }
-  .logo-container img{
+  .logo-container img {
     margin-left: 5rem;
     width: 13rem;
   }

@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import MovieCards from "../../components/MovieCards";
 import MovieHeader from "../../components/MovieHeader";
 import "./styles.css";
+import { getAllMovies } from "../../api/getAllMovies";
 
 function MainPage() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("https://ghibliapi.vercel.app/films/")
-      .then((response) => response.json())
-      .then((data) => setMovies(data));
+    const fetchMovies = async () => {
+      const moviesData = await getAllMovies();
+      setMovies(moviesData);
+    };
+
+    fetchMovies();
   }, []);
 
   return (

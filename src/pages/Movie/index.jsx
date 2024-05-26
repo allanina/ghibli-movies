@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { getSingleMovie } from "../../api/getMovie";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -8,10 +9,13 @@ function MovieDetails() {
   console.log(movies);
 
   useEffect(() => {
-    fetch(`https://ghibliapi.vercel.app/films/${id}`)
-      .then((response) => response.json())
-      .then((data) => setMovies(data));
-  }, []);
+    const fetchMovie = async () => {
+      const movieData = await getSingleMovie(id);
+      setMovies(movieData);
+    };
+
+    fetchMovie();
+  }, [id]);
 
   return (
     <div className="movie-details-wrapper">

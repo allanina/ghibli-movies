@@ -1,21 +1,6 @@
 .home-container {
-  height: 88vh;
-  background-color: #ffffff;
-  margin: 85px 50px;
-}
-
-.movie-card-container {
-  height: 75%;
-  overflow: scroll;
-  padding: 20px 100px;
-}
-
-.movie-card-container::-webkit-scrollbar {
-  width: 8px;
-  background-color: #eef5f8;
-}
-
-.movie-card-container::-webkit-scrollbar-thumb {
-  background-color: #1ca0d1;
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90vw;
+  height: 90vh;
 }

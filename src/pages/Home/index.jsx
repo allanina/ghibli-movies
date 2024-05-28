@@ -19,9 +19,7 @@ function MainPage() {
   return (
     <section className="home-container">
       <MovieHeader setMovies={setMovies} movies={movies} />
-      <div className="movie-card-container">
-        <MovieCards movies={movies} />
-      </div>
+      <MovieCards movies={movies} />
     </section>
   );
 }
